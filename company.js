@@ -8,24 +8,53 @@ fetch('companies.json')
         return response.json();
     })
     .then(data => {
-        // Get CIKNOZ from URL query parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const ciknoz = urlParams.get('CIKNOZ');
+        // Get company data from local storage
+        let companyData = JSON.parse(localStorage.getItem('selectedCompany'));
 
-        // Find company in data based on CIKNOZ
-        const company = data.find(item => item.CIKNOZ === ciknoz);
+        // If company data exists in local storage
+        if (companyData) {
+            // Find company in data based on CIKNOZ
+            const company = data.find(item => item.CIKNOZ === companyData.CIKNOZ);
 
-        // If company is found, display company information
-        if (company) {
-            // Assuming 'company-name' is an existing ID in your HTML
-            document.getElementById('company-name').textContent = company.name;
-        } else {
-            // If company is not found, redirect to homepage
-            window.location.href = 'index.html';
+            // If company is found, display company information
+            if (company) {
+                document.getElementById('company-name').textContent = company.name;
+
+                const info = document.getElementById('company-info');
+                // For each key in the company object, create a paragraph to display the key and value
+                Object.keys(company).forEach(key => {
+                    if (key !== 'name') {
+                        const p = document.createElement('p');
+                        p.textContent = `${key}: ${company[key]}`;
+                        info.appendChild(p);
+                    }
+                });
+            } else {
+                // If company is not found, redirect to homepage
+                window.location.href = 'index.html';
+            }
         }
+        // Clear the selectedCompany from localStorage
+        localStorage.removeItem('selectedCompany');
     })
     .catch(function(error) {
         console.log(error);
     });
 
-// Removed window.onload event as it seemed to be redundant
+window.onload = () => {
+    let companyData = JSON.parse(localStorage.getItem('selectedCompany'));
+  
+    if (companyData) {
+        // Set the document title to the company name
+        document.title = `${companyData.name} - Company Info`;
+  
+        // Set the header text to the company name
+        let header = document.querySelector('header h1');
+        if (header) {
+            header.textContent = `${companyData.name} - Company Info`;
+        }
+    } else {
+        // If companyData is null, redirect to the homepage
+        window.location.href = 'index.html';
+    }
+};

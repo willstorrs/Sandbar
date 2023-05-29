@@ -30,7 +30,8 @@ fetch('companies.json')
             const searchQuery = document.getElementById('search-input').value;
             const company = data.find(item => item.name.toLowerCase() === searchQuery.toLowerCase() || item.ticker.toLowerCase() === searchQuery.toLowerCase());
             if (company) {
-                window.location.href = `company.html?CIKNOZ=${company.CIKNOZ}`;
+                localStorage.setItem('selectedCompany', JSON.stringify(company));
+                window.location.href = 'company.html';
             }
         });
     })
