@@ -30,7 +30,7 @@ fetch('companies.json')
             const searchQuery = document.getElementById('search-input').value;
             const company = data.find(item => item.name.toLowerCase() === searchQuery.toLowerCase() || item.ticker.toLowerCase() === searchQuery.toLowerCase());
             if (company) {
-                window.location.href = `https://willstorrs.github.io/Sandbar/companies/${company.CIKNOZ}/${company.name.toLowerCase().replace(' ', '-')}-1`;
+                window.location.href = `company.html?CIKNOZ=${company.CIKNOZ}`;
             }
         });
     })
