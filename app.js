@@ -1,24 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Company Information</title>
-  <link rel="stylesheet" href="app.css">
-</head>
-<body>
-  <header>
-    <h1 id="company-name"></h1>
-  </header>
-  
-  <main id="company-info">
-    <!-- Company information will be inserted here -->
-  </main>
-  
-  <footer>
-    A Will Storrs Production
-  </footer>
-  
-  <a href="index.html" id="home-link">Back to Home</a>
+// Fetch company data from JSON file
+fetch('companies.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+        // If response is OK, return the JSON data
+        return response.json();
+    })
+    .then(data => {
+        // Get datalist element
+        const datalist = document.getElementById('companies');
+        
+        // Populate datalist with company names and tickers
+        data.forEach(item => {
+            // Add company name option
+            const optionName = document.createElement('option');
+            optionName.value = item.name;
+            datalist.appendChild(optionName);
 
-  <script src="company.js"></script>
-</body>
-</html>
+            // Add ticker option
+            const optionTicker = document.createElement('option');
+            optionTicker.value = item.ticker;
+            datalist.appendChild(optionTicker);
+        });
+
+        // Add event listener to form submission
+        document.getElementById('search-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchQuery = document.getElementById('search-input').value;
+            window.location.href = `company.html?name=${searchQuery}`;
+        });
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
