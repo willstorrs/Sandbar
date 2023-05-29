@@ -36,3 +36,19 @@ fetch('companies.json')
   .catch(function(error) {
     console.log(error);
   });
+  
+  window.onload = () => {
+    let companyData = JSON.parse(localStorage.getItem('selectedCompany'));
+  
+    if (companyData) {
+      // Set the document title to the company name
+      document.title = `${companyData.name} - Company Info`;
+  
+      // Set the header text to the company name
+      let header = document.querySelector('header h1');
+      if (header) {
+        header.textContent = `${companyData.name} - Company Info`;
+      }
+    }
+  };
+  
