@@ -1,0 +1,57 @@
+[
+    {
+      "name": "Ball Corp",
+      "ticker": "BLL",
+      "exchange": "NYSE",
+      "CIK": "0000009389",
+      "CIKNOZ": "9389",
+      "fiscal_year_end": "December 31",
+      "address": "100 Technology Parkway, Broomfield, CO 80021"
+    },
+    {
+      "name": "Builders Firstsource",
+      "ticker": "BLDR",
+      "exchange": "NASDAQ",
+      "CIK": "0001316835",
+      "CIKNOZ": "1316835",
+      "fiscal_year_end": "December 31",
+      "address": "1300 Perimeter Center East, Atlanta, GA 30339"
+    },
+    {
+      "name": "Cleveland Cliffs",
+      "ticker": "CLF",
+      "exchange": "NYSE",
+      "CIK": "0000764065",
+      "CIKNOZ": "764065",
+      "fiscal_year_end": "December 31",
+      "address": "1000 Lakeside Avenue, Cleveland, OH 44114"
+    },
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "exchange": "NASDAQ",
+      "CIK": "0001045810",
+      "CIKNOZ": "1045810",
+      "fiscal_year_end": "May 2",
+      "address": "2700 W. Tasman Drive, Santa Clara, CA 95054"
+    },
+    {
+      "name": "TopBuild",
+      "ticker": "BLD",
+      "exchange": "NYSE",
+      "CIK": "0001624822",
+      "CIKNOZ": "1624822",
+      "fiscal_year_end": "December 31",
+      "address": "1000 Perimeter Center East, Atlanta, GA 30339"
+    },
+    {
+      "name": "United Rentals",
+      "ticker": "URI",
+      "exchange": "NYSE",
+      "CIK": "0001067701",
+      "CIKNOZ": "1067701",
+      "fiscal_year_end": "December 31",
+      "address": "1900 W. John Carpenter Freeway, Dallas, TX 75234"
+    }
+  ]
+  

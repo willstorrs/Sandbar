@@ -1,0 +1,122 @@
+body {
+  background-color: #f0f8ff;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #66b3ff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+header h1 {
+  color: white;
+  font-size: 3em;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#search-container {
+  position: relative;
+  margin-top: 10vh;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search-form {
+  display: flex;
+}
+
+#search-elements {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#search-input {
+  flex: 4;
+  padding: 10px;
+  border: 2px solid #66b3ff;
+  border-radius: 5px 0px 0px 5px; /* Top left and bottom left rounded, top right and bottom right square */
+}
+
+#search-form button {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: #66b3ff;
+  color: white;
+  border: 2px solid #66b3ff; /* Add border in the same blue */
+  border-radius: 0px 5px 5px 0px; /* Top right and bottom right rounded, top left and bottom left square */
+  cursor: pointer;
+}
+
+#search-form button:hover {
+  background-color: #80ccff;
+}
+
+#company-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 0.7em;
+  color: #808080;
+}
+
+#company-page {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+#company-nav {
+  flex: 1;
+  margin-right: 20px;
+}
+
+#company-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#company-nav li {
+  background-color: #66b3ff;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#company-content {
+  flex: 4;
+}
+
+#company-content article {
+  background-color: #f0f8ff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid #66b3ff;
+}
+
+#home-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
