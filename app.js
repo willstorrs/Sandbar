@@ -22,7 +22,8 @@ function fetchCompanies() {
 function populateDataList(data) {
   data.forEach(item => {
     const option = document.createElement('option');
-    option.value = `${item.name} (${item.ticker})`;
+    option.value = item.ticker;
+    option.innerText = item.name;
     dataList.appendChild(option);
   });
 }
