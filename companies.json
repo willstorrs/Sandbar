@@ -1,6 +1,3 @@
-// This JSON file holds the details of various companies.
-// Each company is represented as a separate object within this array.
-// Each object contains details about the company like its name, ticker, exchange, CIK, CIKNOZ, fiscal_year_end and address.
 [
   {
     "name": "Ball Corp",
