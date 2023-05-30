@@ -1,4 +1,4 @@
-/* Setting up base layout for the body */
+/* Set the basic style for the body */
 body {
   background-color: #f0f8ff;
   font-family: 'Arial', sans-serif;
@@ -9,7 +9,7 @@ body {
   position: relative;
 }
 
-/* Header styles including sticky position */
+/* Define the style for header */
 header {
   text-align: center;
   padding: 20px;
@@ -19,7 +19,7 @@ header {
   z-index: 1;
 }
 
-/* Heading style in header */
+/* Set style for header's h1 */
 header h1 {
   color: white;
   font-size: 3em;
@@ -27,7 +27,7 @@ header h1 {
   font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-/* Container for the search form */
+/* Define the style for the search container */
 #search-container {
   position: relative;
   margin-top: 10vh;
@@ -36,19 +36,19 @@ header h1 {
   margin-right: auto;
 }
 
-/* Flex layout for search form */
+/* Define style for search form */
 #search-form {
   display: flex;
 }
 
-/* Styling search elements container */
+/* Define style for search elements */
 #search-elements {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-/* Input box styling */
+/* Set style for search input */
 #search-input {
   flex: 4;
   padding: 10px;
@@ -56,7 +56,7 @@ header h1 {
   border-radius: 5px 0px 0px 5px;
 }
 
-/* Button styling within the search form */
+/* Define style for search form button */
 #search-form button {
   flex: 1;
   padding: 10px 20px;
@@ -67,19 +67,19 @@ header h1 {
   cursor: pointer;
 }
 
-/* Button hover effect */
+/* Define hover style for search form button */
 #search-form button:hover {
   background-color: #80ccff;
 }
 
-/* Link to the company page positioning */
+/* Define style for company link */
 #company-link {
   position: fixed;
   bottom: 0;
   left: 0;
 }
 
-/* Footer styling and positioning */
+/* Set style for footer */
 footer {
   position: absolute;
   bottom: 0;
@@ -89,26 +89,26 @@ footer {
   color: #808080;
 }
 
-/* Company page layout */
+/* Define style for company page */
 #company-page {
   display: flex;
   justify-content: space-between;
   margin: 20px;
 }
 
-/* Styling company navigation section */
+/* Define style for company navigation */
 #company-nav {
   flex: 1;
   margin-right: 20px;
 }
 
-/* Removing list styling in the company navigation */
+/* Define style for unordered lists in company navigation */
 #company-nav ul {
   list-style-type: none;
   padding: 0;
 }
 
-/* Styling list items in company navigation */
+/* Set style for list items in company navigation */
 #company-nav li {
   background-color: #66b3ff;
   color: white;
@@ -118,12 +118,12 @@ footer {
   cursor: pointer;
 }
 
-/* Styling the company content section */
+/* Define style for company content */
 #company-content {
   flex: 4;
 }
 
-/* Styling individual articles within company content */
+/* Define style for articles in company content */
 #company-content article {
   background-color: #f0f8ff;
   padding: 20px;
@@ -132,8 +132,9 @@ footer {
   border: 2px solid #66b3ff;
 }
 
-/* Positioning the home link */
+/* Define style for home link */
 #home-link {
   position: fixed;
   bottom: 0;
-  left: 0 to get to the first query.'
+  right: 0;
+}
