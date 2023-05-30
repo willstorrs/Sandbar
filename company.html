@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Company Info</title> <!-- JavaScript will update this -->
+  <!-- Setting the title of the page to "Company Info". This will be updated by JavaScript. -->
+  <title>Company Info</title>
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
   <header>
-    <h1>Company Info</h1> <!-- JavaScript will update this -->
+    <!-- The main heading of the page. This will also be updated by JavaScript. -->
+    <h1>Company Info</h1>
   </header>
-  
+
+  <!-- This is the main content area of the page. -->
   <main id="company-page">
+    <!-- Navigation for the page. -->
     <nav id="company-nav">
       <ul>
         <li>Home</li>
@@ -19,7 +23,10 @@
         <li>Contact</li>
       </ul>
     </nav>
+
+    <!-- Main content for the page. -->
     <section id="company-content">
+      <!-- Section for the company profile. -->
       <article>
         <h2>Company Profile</h2>
         <ul>
@@ -29,10 +36,14 @@
           <li>FY 2019 10-K</li>
         </ul>
       </article>
+
+      <!-- Section for the financials of the company. -->
       <article>
         <h2>Financials</h2>
         <p>This is some financial information about the company...</p>
       </article>
+
+      <!-- Section for the news of the company. -->
       <article>
         <h2>News</h2>
         <p>This is some recent news about the company...</p>
@@ -40,13 +51,18 @@
     </section>
   </main>
   
+  <!-- Footer for the page. -->
   <footer>
     A Will Storrs Production
   </footer>
 
+  <!-- Link to go back to the search page. -->
   <a href="index.html" id="home-link">Back to Search</a>
 
+  <!-- The util.js script has common functionality used across different pages. -->
   <script src="utils.js"></script>
+
+  <!-- The company.js script contains functionality specific to this page. -->
   <script src="company.js"></script>
 </body>
 </html>

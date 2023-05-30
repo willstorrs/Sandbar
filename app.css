@@ -1,3 +1,4 @@
+/* Setting up base layout for the body */
 body {
   background-color: #f0f8ff;
   font-family: 'Arial', sans-serif;
@@ -8,6 +9,7 @@ body {
   position: relative;
 }
 
+/* Header styles including sticky position */
 header {
   text-align: center;
   padding: 20px;
@@ -17,6 +19,7 @@ header {
   z-index: 1;
 }
 
+/* Heading style in header */
 header h1 {
   color: white;
   font-size: 3em;
@@ -24,6 +27,7 @@ header h1 {
   font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+/* Container for the search form */
 #search-container {
   position: relative;
   margin-top: 10vh;
@@ -32,43 +36,50 @@ header h1 {
   margin-right: auto;
 }
 
+/* Flex layout for search form */
 #search-form {
   display: flex;
 }
 
+/* Styling search elements container */
 #search-elements {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
+/* Input box styling */
 #search-input {
   flex: 4;
   padding: 10px;
   border: 2px solid #66b3ff;
-  border-radius: 5px 0px 0px 5px; /* Top left and bottom left rounded, top right and bottom right square */
+  border-radius: 5px 0px 0px 5px;
 }
 
+/* Button styling within the search form */
 #search-form button {
   flex: 1;
   padding: 10px 20px;
   background-color: #66b3ff;
   color: white;
-  border: 2px solid #66b3ff; /* Add border in the same blue */
-  border-radius: 0px 5px 5px 0px; /* Top right and bottom right rounded, top left and bottom left square */
+  border: 2px solid #66b3ff;
+  border-radius: 0px 5px 5px 0px;
   cursor: pointer;
 }
 
+/* Button hover effect */
 #search-form button:hover {
   background-color: #80ccff;
 }
 
+/* Link to the company page positioning */
 #company-link {
   position: fixed;
   bottom: 0;
   left: 0;
 }
 
+/* Footer styling and positioning */
 footer {
   position: absolute;
   bottom: 0;
@@ -78,22 +89,26 @@ footer {
   color: #808080;
 }
 
+/* Company page layout */
 #company-page {
   display: flex;
   justify-content: space-between;
   margin: 20px;
 }
 
+/* Styling company navigation section */
 #company-nav {
   flex: 1;
   margin-right: 20px;
 }
 
+/* Removing list styling in the company navigation */
 #company-nav ul {
   list-style-type: none;
   padding: 0;
 }
 
+/* Styling list items in company navigation */
 #company-nav li {
   background-color: #66b3ff;
   color: white;
@@ -103,10 +118,12 @@ footer {
   cursor: pointer;
 }
 
+/* Styling the company content section */
 #company-content {
   flex: 4;
 }
 
+/* Styling individual articles within company content */
 #company-content article {
   background-color: #f0f8ff;
   padding: 20px;
@@ -115,8 +132,8 @@ footer {
   border: 2px solid #66b3ff;
 }
 
+/* Positioning the home link */
 #home-link {
   position: fixed;
   bottom: 0;
-  left: 0;
-}
+  left: 0 to get to the first query.'

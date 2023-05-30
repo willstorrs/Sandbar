@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Setting the title of the page -->
   <title>Sandbar - Homepage</title>
+  <!-- Linking the CSS file -->
   <link rel="stylesheet" href="app.css">
 </head>
 <body>
+  <!-- Header of the page -->
   <header>
+    <!-- Main heading of the page -->
     <h1>Welcome to the Sandbar</h1>
   </header>
   
+  <!-- Main content of the page -->
   <main id="search-container">
+    <!-- Form to search for companies -->
     <form autocomplete="off" id="search-form" action="#" method="GET">
+      <!-- Search input and button -->
       <div id="search-elements">
         <input type="text" id="search-input"  placeholder="Ticker or Company Name (i.e. AAPL or Apple, etc)" list="companies" />
         <datalist id="companies"></datalist>
@@ -19,10 +26,12 @@
     </form>
   </main>
   
+  <!-- Footer of the page -->
   <footer>
-    A Will Storrs Production v2.5
+    A Will Storrs Production v2.6
   </footer>
   
+  <!-- Including the necessary JavaScript files -->
   <script src="utils.js"></script>
   <script src="app.js"></script>
 </body>
