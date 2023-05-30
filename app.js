@@ -7,6 +7,9 @@ let companyNav = document.querySelector("#company-nav");
 let companyContent = document.querySelector("#company-content");
 let dataList = document.querySelector("#companies");
 
+// company data array
+let companiesData = [];
+
 // function to fetch companies data
 function fetchCompanies() {
   return fetch('companies.json')
@@ -30,16 +33,29 @@ function populateDataList(data) {
 
 // Fetch company data from JSON file
 fetchCompanies()
-  .then(data => populateDataList(data))
+  .then(data => {
+    companiesData = data;
+    populateDataList(data);
+  })
   .catch(error => console.log(error));
 
 // Search form submit event
 searchForm.addEventListener("submit", function (e) {
   e.preventDefault();
   let searchTerm = searchInput.value;
-  // here you can implement your search logic
 
-  console.log(`Search for: ${searchTerm}`);
+  // check if search term matches a company in the list
+  let selectedCompany = companiesData.find(item => item.ticker.toLowerCase() === searchTerm.toLowerCase() || item.name.toLowerCase() === searchTerm.toLowerCase());
+
+  if(selectedCompany) {
+    // save selected company data to local storage so that it can be accessed in company.html
+    localStorage.setItem('selectedCompany', JSON.stringify(selectedCompany));
+
+    // navigate to the company.html page
+    window.location.href = 'company.html';
+  } else {
+    console.log('Company not found');
+  }
 });
 
 // Link to company page click event
