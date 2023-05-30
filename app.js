@@ -1,40 +1,38 @@
-// Fetch company data from JSON file
-fetch('companies.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("HTTP error " + response.status);
-        }
-        // If response is OK, return the JSON data
-        return response.json();
-    })
-    .then(data => {
-        // Get datalist element
-        const datalist = document.getElementById('companies');
-        
-        // Populate datalist with company names and tickers
-        data.forEach(item => {
-            // Add company name option
-            const optionName = document.createElement('option');
-            optionName.value = item.name;
-            datalist.appendChild(optionName);
+function fetchCompanies() {
+  return fetch('companies.json')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error("HTTP error " + response.status);
+          }
+          return response.json();
+      });
+}
 
-            // Add ticker option
-            const optionTicker = document.createElement('option');
-            optionTicker.value = item.ticker;
-            datalist.appendChild(optionTicker);
-        });
+fetchCompanies()
+  .then(data => {
+      const datalist = document.getElementById('companies');
+      
+      data.forEach(item => {
+          const optionName = document.createElement('option');
+          optionName.value = item.name;
+          datalist.appendChild(optionName);
 
-        // Add event listener to form submission
-        document.getElementById('search-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const searchQuery = document.getElementById('search-input').value;
-            const company = data.find(item => item.name.toLowerCase() === searchQuery.toLowerCase() || item.ticker.toLowerCase() === searchQuery.toLowerCase());
-            if (company) {
-                localStorage.setItem('selectedCompany', JSON.stringify(company));
-                window.location.href = 'company.html';
-            }
-        });
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
+          const optionTicker = document.createElement('option');
+          optionTicker.value = item.ticker;
+          datalist.appendChild(optionTicker);
+      });
+
+      document.getElementById('search-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const searchQuery = document.getElementById('search-input').value;
+          const company = data.find(item => item.name.toLowerCase() === searchQuery.toLowerCase() || item.ticker.toLowerCase() === searchQuery.toLowerCase());
+          if (company) {
+              localStorage.setItem('selectedCompany', JSON.stringify(company));
+              window.location.href = 'company.html';
+          }
+      });
+  })
+  .catch(error => {
+      console.log(error);
+      alert('An error occurred while fetching companies data. Please try again later.');
+  });
